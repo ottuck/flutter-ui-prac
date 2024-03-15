@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:toonflix/widgets/buttons.dart';
 
@@ -123,6 +122,7 @@ class App extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(22),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,6 +160,17 @@ class App extends StatelessWidget {
                               ],
                             )
                           ],
+                        ),
+                        Transform.scale(
+                          scale: 2,
+                          child: Transform.translate(
+                            offset: const Offset(5, 10),
+                            child: const Icon(
+                              Icons.euro_rounded,
+                              color: Colors.white,
+                              size: 88,
+                            ),
+                          ),
                         ),
                       ],
                     ),
